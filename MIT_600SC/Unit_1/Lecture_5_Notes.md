@@ -38,4 +38,4 @@ as this varies from the integer-based indexing we have seen with other collectio
 # Problem Set
 # ==========================
 
-* None assigned (still work on Problem Set 2 from Lecture 4)
+* None assigned (still work on Problem Set 1 from Lecture 4)
