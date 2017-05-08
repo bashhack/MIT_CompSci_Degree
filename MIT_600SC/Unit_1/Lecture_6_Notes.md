@@ -27,3 +27,18 @@ def simpleExp(b, n):
 ```
 
 * Ex. 2 (Tower of Hanoi) / Ex. 3 (Palindrome) / Ex. 4 (Fibonacci) are in `Lecture_6_Examples.py`
+
+# Check Yourself
+# ==================
+
+1) What is recursion?
+""
+
+2) What is a recursive case?
+""
+
+3) What is a base case?
+""
+
+# Problem Set 2
+# ==================
