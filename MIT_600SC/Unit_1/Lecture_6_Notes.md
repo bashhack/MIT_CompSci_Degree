@@ -32,13 +32,15 @@ def simpleExp(b, n):
 # ==================
 
 1) What is recursion?
-""
+"Recursion is a method of solving a problem by means of calling a function itself repeatedly
+until the input satisfies a base case."
 
 2) What is a recursive case?
-""
+"The recursive case is the main work of the recursive function, where a simpler version
+of the problem at hand is defined along with other simple operations."
 
 3) What is a base case?
-""
+"The base case is the direct answer, where the recursion 'unwraps' and evaluated."
 
 # Problem Set 2
 # ==================

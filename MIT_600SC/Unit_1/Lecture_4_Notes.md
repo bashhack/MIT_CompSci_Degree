@@ -255,4 +255,4 @@ Hints:
 1)
 2)
 3)
-4)
+4) COMPLETED - './ps2_hangman.py'
