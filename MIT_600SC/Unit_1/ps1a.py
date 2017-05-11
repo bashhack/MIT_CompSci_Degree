@@ -1,22 +1,24 @@
 # Problem Set 1 - A
 # =============================================================================
-# Write a program to calculate the credit card balance after one year if a person only
-# pays the minimum monthly payment required by the credit card company each month.
+# Write a program to calculate the credit card balance after one year if a
+# person only pays the minimum monthly payment required by the credit card
+# company each month.
 
 # Use `raw_input` to ask for the following floating point numbers:
 # 1) the outstanding balance on the credit card
 # 2) annual interest rate
 # 3) minimum monthly payment rate
 
-# For each month, print the minimum monthly payment, remaining balance, principal paid
-# in the format shown in the test cases below. All numbers should be rounded to the nearest
-# penny. Finally print the result, which should include the total amount paid that year
-# and the remaining balance.
+# For each month, print the minimum monthly payment, remaining balance,
+# principal paid in the format shown in the test cases below. All numbers
+# should be rounded to the nearest penny. Finally print the result, which
+# should include the total amount paid that year and the remaining balance.
 
 # Problem Set 1a
 # Name: Marc Laughton
 # Collaborators: N/A
 # Time Spent: 20 minutes
+
 
 def get_input_as_float(msg):
     return float(raw_input(msg))

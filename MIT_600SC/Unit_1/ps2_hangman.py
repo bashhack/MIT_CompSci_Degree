@@ -1,12 +1,12 @@
-# 6.00 Problem Set 3
-#
-# Hangman
-#
+# Problem Set 2 - D - Hangman
+# =============================================================================
+
+# Problem Set 2d
+# Name: Marc Laughton
+# Collaborators: N/A
+# Time Spent: 2 hours 30 minutes
 
 
-# -----------------------------------
-# Helper code
-# (you don't need to understand this helper code)
 import random
 import string
 import sys
@@ -23,13 +23,10 @@ def load_words():
 
     print "Loading word list from file..."
 
-    # inFile: file
     inFile = open(WORDLIST_FILENAME, 'r', 0)
 
-    # line: string
     line = inFile.readline()
 
-    # wordlist: list of strings
     wordlist = string.split(line)
 
     print "  ", len(wordlist), "words loaded."
@@ -45,17 +42,8 @@ def choose_word(wordlist):
 
     return random.choice(wordlist)
 
-# end of helper code
-# -----------------------------------
-
-# actually load the dictionary of words and point to it with
-# the wordlist variable so that it can be accessed from anywhere
-# in the program
-
 
 wordlist = load_words()
-
-# your code begins here!
 
 
 # =============================================================================
@@ -168,8 +156,8 @@ while guess_count > 0:
             word_shown_to_user,
             spacer_msg,
         )
-
-show_msg(lose_msg, word_to_guess)
+else:
+    show_msg(lose_msg, word_to_guess)
 
 # =============================================================================
 # End Main Game Loop
