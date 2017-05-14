@@ -1,20 +1,22 @@
 # Problem Set 1 - B
 # =============================================================================
-# Write a program that calculates the minimum fixed monthly payment needed in order to pay
-# off a credit card balance within 12 months. We will not be dealing with a minimum monthly
-# payment rate.
+# Write a program that calculates the minimum fixed monthly payment needed in
+# order to pay off a credit card balance within 12 months. We will not be
+# dealing with a minimum monthly payment rate.
 
 # Take as `raw_input` the following floating point numbers:
 # 1) the oustanding balance on the credit card
 # 2) annual interest rate as a decimal
 
-# Print out the fixed minimum monthly payment, number of months (at most 12, but possibly
-# less) it takes to pay off the debt, and the balance (likely to be a negative number).
+# Print out the fixed minimum monthly payment, number of months (at most 12,
+# but possibly less) it takes to pay off the debt, and the balance (likely to
+# be a negative number).
 
-# Assume the interest is compounded monthly according to the balance at the start of the month
-# (before the payment for the month is made). The monthly payment must be a multiple of $10 and
-# is the same for all months. Notice that it is possible for the balance to become negative
-# using this payment scheme. In short:
+# Assume the interest is compounded monthly according to the balance at the
+# start of the month (before the payment for the month is made). The monthly
+# payment must be a multiple of $10 and is the same for all months. Notice
+# that it is possible for the balance to become negative using this
+# payment scheme. In short:
 
 # MONTHLY INTEREST RATE: Annual interest rate / 12.0
 # UPDATED BALANCE EACH MONTH: Previous balance * (1 + Monthly Interest Rate) - Minimum monthly payment

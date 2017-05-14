@@ -50,19 +50,23 @@ def withinEpsilon(x, y, epsilon):
     returns True if x is within epsilon of y"""
     return abs(x - y) <= epsilon
 
+
 print withinEpsilon(2, 3, 1)  # 2 - 3 = -1 = 1 = 1 <= 1 = True
 val = withinEpsilon(2, 3, 0.5)  # 2 - 3 = -1 = 1 = 1 <= 0.5 = False
 print val
+
 
 def f(x):
     x = x + 1
     print 'x in fn scope =', x
     return x
 
+
 x = 3
 z = f(x)
 print 'z =', z
 print 'x in global scope =', x
+
 
 def f1(x):
     def g():
@@ -73,8 +77,10 @@ def f1(x):
     # assert False
     return x
 
+
 x = 3
 z = f1(x)
+
 
 def isEven(i):
     """assumes i a positive int
@@ -108,12 +114,13 @@ def findRoot(pwr, val, epsilon):
 
     return ans
 
+
 def testFindRoot():
     """x float, epsilon float, pwr positive int"""
     for x in (-1.0, 1.0, 3456.0):
         for pwr in (1, 2, 3):
             ans = findRoot(pwr, x, 0.001)
-            if ans == None:
+            if ans is None:
                 print 'The answer is imaginary'
             else:
                 print ans, 'to the power of', pwr, 'is close to', x

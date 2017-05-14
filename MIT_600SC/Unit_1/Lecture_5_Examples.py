@@ -81,21 +81,24 @@ print D1
 for k in D1.keys():
     print k, '=', D1[k]
 
-EtoF = {'bread': 'du pain', 'wine': 'du vin',\
-        'eats': 'mange', 'drinks': 'bois',\
-        'likes': 'aime', 1: 'un',\
+EtoF = {'bread': 'du pain', 'wine': 'du vin',
+        'eats': 'mange', 'drinks': 'bois',
+        'likes': 'aime', 1: 'un',
         '6.00': '6.00'}
+
 print EtoF
 print EtoF.keys()
 print EtoF.keys
 del EtoF['eats']
 print EtoF
 
+
 def translateWord(word, dictionary):
     if word in dictionary:
         return dictionary[word]
     else:
         return word
+
 
 def translate(sentence):
     translation = ''
@@ -109,6 +112,7 @@ def translate(sentence):
             word = ''
     # print 'translation =', repr(translation)
     return translation[1:] + ' ' + translateWord(word, EtoF)  # necessary for getting last word
+
 
 print translate('John eats bread')
 print translate('Steve drinks wine')

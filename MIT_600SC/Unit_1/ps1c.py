@@ -1,9 +1,10 @@
 # Problem Set 1 - C
 # =============================================================================
 # Write a program that uses these bounds and bisection search
-# (for more info check here: https://en.wikipedia.org/wiki/Bisection_method) to find the
-# smallest monthly payment to the cent (no more multiples of $10) such that we can pay off the debt
-# within a year. Try it out with large inputs, and notice how fast it is. Produce the output in the same format
+# (for more info check here: https://en.wikipedia.org/wiki/Bisection_method)
+# to find the smallest monthly payment to the cent (no more multiples of $10)
+# such that we can pay off the debt within a year. Try it out with large
+# inputs, and notice how fast it is. Produce the output in the same format
 # as you did in Problem 2.
 
 # Problem Set 1c
