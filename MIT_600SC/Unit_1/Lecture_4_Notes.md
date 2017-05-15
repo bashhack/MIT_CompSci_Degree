@@ -252,7 +252,7 @@ Hints:
     the problem easier!
 
 
-1)
-2)
-3)
+1) COMPLETED - './ps2_newton.py'
+2) COMPLETED - './ps2_newton.py'
+3) COMPLETED - './ps2_newton.py'
 4) COMPLETED - './ps2_hangman.py'
