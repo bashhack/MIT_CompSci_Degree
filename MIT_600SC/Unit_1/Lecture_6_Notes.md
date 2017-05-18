@@ -82,23 +82,23 @@ Please let us know how long you spend on each problem. We want to be careful not
 you by giving out problems that take longer than we anticipated.
 
 - Getting Started
-1) Download and save the Problem Set 3 code files.
+1) Download and save the Problem Set 3 code files. - DONE
 2) Run `ps3a.py` without making any modifications to it, in order to ensure that everything
    is set up correctly. The code we have given you loads a list of valid words from a file and
    then calls the `play_game` function. You will implement the functions it needs in order to
-   work. If everything is okay, after a small delay, you should see the following printed out:
+   work. If everything is okay, after a small delay, you should see the following printed out: - DONE
 3) `Loading word list from file...
         83667 words loaded.`
 
    If you see an IOError instead (e.g., No such file or directory), you should change the value
-   of the `WORDLIST_FILENAME` constant to the complete pathname for the file `words.txt`.
+   of the `WORDLIST_FILENAME` constant to the complete pathname for the file `words.txt`. - DONE
 4) The file `ps3a.py` has a number of already implemented functions you can use while writing
    up your solution. You can ignore the code between the helper comments, though you should
-   read and understand everything else.
+   read and understand everything else. - DONE
 5) This problem set is structured so that you will write a number of modular functions and
    then glue them together to form the complete word playing game. Instead of waiting until the
    entire game is 'ready', you should test each function you write, individually, before moving
-   on. This aproach is known as 'unit testing' and it will help you debug your code.
+   on. This aproach is known as 'unit testing' and it will help you debug your code. - DONE
 
 We have provided several test functions to get you started. As you make progress on the problem set,
 run `test_ps3a.py` as you go.
@@ -110,7 +110,7 @@ If you run `test_ps3a.py` using the provided `ps3a.py` skeleton, you should see 
 tests fail.
 
 - PART A:
-- Problem 1 - Word Scores
+- Problem 1 - Word Scores - DONE
 The first step is to implement some code that allows us to calculate the score for a single word.
 
 The function `get_word_score` should accept a string of lowercase letters as input (a word) and
@@ -132,7 +132,7 @@ a set of random letters. For example:
 
 `a, q, l, m, u, i, l`
 
-In our program, a hand will represented as a dictionary: the keys are (lowercase) letters and the
+In our program, a hand will be represented as a dictionary: the keys are (lowercase) letters and the
 values are the number of times the particular letter is repeated in that hand. For example, the above
 hand would be represented as:
 
@@ -162,7 +162,7 @@ The hand a player is dealt is a set of letters chosen at random. We provide you 
 implementation of a function that gnereates this random hand, `deal_hand`. The function takes
 as a positive integer n, and returns a new object, hand containing n lowercase letters.
 
-- Removing letters from a hand (you implement this)
+- Removing letters from a hand (you implement this) - DONE
 The player starts with a hand, a set of letters. As the player spells out words, letters
 from this set are used up. For example, the player could start out with the following hand:
 
@@ -193,7 +193,7 @@ Implement the `update_hand` function. Make sure this function has no side effect
 TESTING: make sure the `test_update_hand()` tests pass. You may also want to test your
 implementation of `update_hand` with some reasonable inputs.
 
-- Problem 3 - Valid words
+- Problem 3 - Valid words - DONE
 At this point, we have written code to generate a random hand and display that hand to
 the user. We can also ask the user for a word (Python's `raw_input`) and score the word
 (using your `get_word_score`). However, at this point we have not written any code to
