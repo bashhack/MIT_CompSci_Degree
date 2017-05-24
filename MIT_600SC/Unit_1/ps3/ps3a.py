@@ -5,6 +5,12 @@
 #
 #
 
+# Problem Set 3a
+# Name: Marc Laughton
+# Collaborators: N/A
+# Time Spent: 4 hours
+
+
 import random
 import string
 
@@ -240,6 +246,7 @@ def is_valid_word(word, hand, word_list):
         # than occurance in hand, return False
         if v > hand.get(k, 0):
             return False
+
     return True
 
 
@@ -280,7 +287,33 @@ def play_hand(hand, word_list):
       word_list: list of lowercase strings
 
     """
-    # TO DO ...
+    len_count = calculate_handlen(hand)
+    score_total = 0
+
+    while calculate_handlen(hand) > 0:
+        print 'Current hand: ', display_hand(hand)
+        user_word = raw_input(
+            '''Please enter a word, or type "." to end the game. '''
+        )
+
+        if user_word == '.':
+            print 'Thanks for playing! Total score: {} points'.format(
+                score_total
+            )
+            return
+        else:
+            is_valid = is_valid_word(user_word, hand, word_list)
+            if is_valid:
+                score = get_word_score(user_word, len_count)
+                hand = update_hand(hand, user_word)
+                score_total += score
+                print 'You\'ve recieved {} point(s) for the word: {}'.format(
+                    score,
+                    user_word,
+                )
+            else:
+                print 'Sorry, please select another word!'
+    print 'You\'re out of letters. Total score: {} points.'.format(score_total)
 
 
 #
@@ -302,12 +335,33 @@ def play_game(word_list):
 
     * If the user inputs anything else, ask them again.
     """
-    # TO DO...
+    game_prompt_msg = '''
+    Please type "n" to start a new game,
+    "r" to replay previous game hand,
+    or "e" to exit the game:
+    >> '''
+
+    hand = deal_hand(HAND_SIZE)
+
+    while True:
+        user_reply_to_game_prompt = raw_input(game_prompt_msg)
+        if user_reply_to_game_prompt == 'e':
+            print 'Sorry to see you go - but, thanks for playing!'
+            return False
+        elif user_reply_to_game_prompt == 'n':
+            print 'Playing a new hand.'
+            hand = deal_hand(HAND_SIZE)
+            play_hand(hand.copy(), word_list)
+        elif user_reply_to_game_prompt == 'r':
+            print 'Now replaying the last hand.'
+            play_hand(hand.copy(), word_list)
+        else:
+            print 'Sorry! Invalid input, please try again.'
+
 
 #
 # Build data structures used for entire session and play game
 #
-
 
 if __name__ == '__main__':
     word_list = load_words()

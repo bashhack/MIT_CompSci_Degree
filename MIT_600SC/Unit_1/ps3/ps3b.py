@@ -8,6 +8,7 @@ from perm import *
 # Problem #6A: Computer chooses a word
 #
 #
+
 def comp_choose_word(hand, word_list):
     """Given a hand and a word_dict, find the word that gives the
     maximum value score, and return it. This word should be
@@ -17,7 +18,6 @@ def comp_choose_word(hand, word_list):
     hand: dictionary (string -> int)
     word_list: list (string)
     """
-    # TO DO...
 
 
 #
@@ -43,7 +43,6 @@ def comp_play_hand(hand, word_list):
      hand: dictionary (string -> int)
      word_list: list (string)
     """
-    # TO DO ...
 
 
 #
@@ -70,12 +69,11 @@ def play_game(word_list):
 
     word_list: list (string)
     """
-    # TO DO...
+
 
 #
 # Build data structures used for entire session and play game
 #
-
 
 if __name__ == '__main__':
     word_list = load_words()
