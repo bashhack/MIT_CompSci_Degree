@@ -53,14 +53,19 @@
 
 # Check Yourself
 # ==================
+
 1) Why do computers use binary representations?
-""
+"For the computer, a binary representation works well to represent the basic mechanism
+of the `switch` - a simple on/off - that is fundamental to its architecture."
 
 2) Why shouldn't we test for equality with floats?
-""
+"Because floats are approximations (see 17-digit rounding), comparing them is going to
+be unreliable, at best."
 
 3) When debugging, how can you ensure that the values in your program are the ones you think they are?
-""
+"Though we can use PDB and/or tesitng harnesses, the simple `print` should be and often is
+an invaluable tool in quickly identifying/verifying the correctness of our program and its
+values."
 
 
 # Problem Set 4

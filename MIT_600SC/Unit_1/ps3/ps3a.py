@@ -1,4 +1,4 @@
-# 6.00 Problem Set 3A Solutions
+# 6.00 Problem Set 3A
 #
 # The 6.00 Word Game
 # Created by: Kevin Luu <luuk> and Jenna Wiens <jwiens>
@@ -291,7 +291,8 @@ def play_hand(hand, word_list):
     score_total = 0
 
     while calculate_handlen(hand) > 0:
-        print 'Current hand: ', display_hand(hand)
+        print 'Current hand: '
+        display_hand(hand)
         user_word = raw_input(
             '''Please enter a word, or type "." to end the game. '''
         )

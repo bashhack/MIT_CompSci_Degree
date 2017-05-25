@@ -251,3 +251,13 @@ as described below in the function's comments.
 
 As before you should use the `HAND_SIZE` constant to determine the number of cards in a hand.
 If you like, you can try out different values for `HAND_SIZE` with your program.
+
+1) COMPLETED - './ps3a.py'
+2) COMPLETED - './ps3a.py'
+3) COMPLETED - './ps3a.py'
+4) COMPLETED - './ps3a.py'
+5) COMPLETED - './ps3a.py'
+6) COMPLETED - './ps3b.py'
+    a) COMPLETED - './ps3/ps3b.py'
+    b) COMPLETED - './ps3/ps3b.py'
+    c) COMPLETED - './ps3/ps3b.py'
