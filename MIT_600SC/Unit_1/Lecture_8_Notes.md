@@ -28,7 +28,7 @@
 * When we think about how long an algorithm will take to run, there are
   a few ways to look at it: (1) Best Case, (2) Worst Case, and (3) Expected Case
 
-* (TODO: INSERT NOTES TAKEN FROM EARLIER...)
+* (TODO: INSERT NOTES TAKEN FROM EARLIER ON W540 Workstation...)
 
 * Let's dive into a specific example to analyze:
 
@@ -51,16 +51,106 @@ def f(n):
   the function: formally, writing `f(x) E O(x**2)`, the function `f` "grows
   no faster" than the quadratic polynomial `x**2`
 
-* Types of Big O:
+* Types of Big O (from best to worst):
   - O(1) - constant
   - O(log n) - logarithmic
   - O(n) - linear
-  - O(n log n) - log linear
+  - O(n log n) - log linear (NOTE: Try not to have anything worse than this!)
   - O(n^c) - polynomial
   - O(c^n) - exponential
 
 * Our aim, ideally, is to define a tight bound (having provided both
   an upper bound and lower bound).
 
+* Here's another example:
+
+```python
+def fact(n):
+  assert n >= 0
+  if n <= 1:
+    return n
+  else:
+    return n * fact(n - 1)
+```
+
+* Notice that the efficiency is actually the same between the recursive
+  and iterative versions of the factorial functions
+
+* Let's look at another example:
+
+```python
+def g(n):
+  x = 0
+  for i in range(n):
+    for j in range(n):
+      x += 1
+  return x
+```
+  Here, our complexity (starting from the inner loop!) is O(n**2)
+
+* Next example:
+
+```python
+def h(x):
+  assert type(x) == int and x >= 0
+  answer = 0
+  s = str(x)
+  for c in s:
+    answer += int(c)
+  return answer
+```
+  Here, we would say that this is O(n) where n is log10(x)
+
+* Next example:
+
+```python
+def search(L, e):
+  for elem in L:
+    if elem === e:
+      return True
+    if elem > e:
+      return False
+  return False
+```
+  Here, our complexity is O(len(L)) - or O(n) where n is len(L)
+
+```python
+def bSearch(L, e, low, high):
+  global numCalls
+  numCalls += 1
+  if high - low < 2:
+    return L[low] == e or L[high] == e
+  mid = low + int((high - low)/2)
+  if L[mid] == e:
+    return True
+  if L[mid] > e:
+    return bSearch(L, e, low, mid - 1)
+  else:
+    return bSearch(L, e, mid + 1, high)
+```
+  Here, we see our complexity as O(log2(len(L))) - or O(log n)
+
+* Our interface using these search functions might look like:
+```python
+def search(L, e):
+  return bSearch(L, e, 0, len(L) - 1)
+```
+
+
 # Check Yourself
 # ==================
+
+1) Why is efficiency important?
+"Understanding efficiency is fundamental to our approach in problem solving matters
+both large and small. Choosing the right algorithm is more important than choosing some
+'tricky' solution, and whether we choose the right algorithm can make orders of magnitude
+difference in how long a calculation will take to resolve (if at all). We can protect ourselves
+by aiming to stay with solutions to problems that reside below O(n log n) or log linear time,
+avoiding both the worst case runtimes of polynomial and exponential runtimes."
+
+2) What notation do we use to state computational complexity?
+"We use the the Greek letter Omicron, and colloquially say 'Big O', to speak about computational
+complexity. Donald Knuth popularized this, but others before him were certainly the originators.
+While Big O describes our upper bound, we may want to describe a tight bound (factoring
+in both upper/lower bounds) in which case we can use Big Theta, and, finally, in the event that we
+want to speak of the minimum runtime we may use Big Omega."
