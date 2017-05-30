@@ -163,7 +163,7 @@ venv2.7/
 /site
 
 # PDFs
-*.pdf
+MIT_600SC/CourseMaterials/private/*.pdf
 
 # ZIPs
 *.zip
