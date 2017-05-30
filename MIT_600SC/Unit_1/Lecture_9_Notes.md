@@ -137,15 +137,35 @@ print 'Sorted list =', newL
 ```
   Merge sort ends up being linear time O(n)
 
+* Review of binary search algorithm:
+```python
+def binary_search(L, e, low, high):
+  if high - low < 2:
+    return L[low] == e or L[high] == e
+  mid = low + int((low + high) / 2)
+  if L[mid] == e:
+    return True
+  if L[mid] > e:
+    return binary_search(L, e, low, mid - 1)
+  else:
+    return binary_search(L, e, mid + 1, high)
+```
+
 # Check Yourself
 # ==================
 
 1) What is indirection (in computing)?
 "Indirection is a means of applying abstraction to a particular problem. A great example is the way
-in which Python handles lists internally."
+in which Python handles lists internally. In some languages a list consists of homogenous objects (i.e.,
+ints/floats/some other data structure or native object), so we can then deduce that each element in the
+list occupies equal space in memory. In Python, lists are not homogenous - so how can we be assured that
+we can access some 'i'th element in constant time. The magic here is indirection, in this case through
+the use of pointers. Each disparate object in a list (that may be of different sizes in memory) is
+represented in the list via a pointer (itself of equal size)."
 
 2) We know that a linear search works on all lists and is O(len(L)). Can we sort a list in sub-linear time?
-""
+"This is 'provably false', sorting of a list often takes (as in the case of merge sort, for example) O(n log n)."
 
 3) Can we even do it in linear time?
-""
+"Likely, no - we may see O(n) in best case time complexity with selection or bubble sort but generally, O(n log n)
+is more likely to appear across all best/average/worst case time complexity calculations."
